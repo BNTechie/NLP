@@ -20,4 +20,7 @@ This project demonstrates an end-to-end sentiment analysis application using a m
 
 ```bash
 pip install pandas scikit-learn fastapi uvicorn pydantic
+´´´
 
+### Step 2: Download and Preprocess Data
+Create a script data_preprocessing.py:
