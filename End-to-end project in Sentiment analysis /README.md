@@ -14,7 +14,7 @@ This project demonstrates an end-to-end sentiment analysis application using a m
 4. [Creating and Running a Docker Container](#creating-and-running-a-docker-container)
 5. [Cleaning Up Docker Resources](#cleaning-up-docker-resources)
 
-## Data Collection and Preprocessing
+
 
 
        
