@@ -16,10 +16,7 @@ This project demonstrates an end-to-end sentiment analysis application using a m
 
 ## Data Collection and Preprocessing
 
-### Step 1: Install Required Libraries
 
-```bash
-pip install pandas scikit-learn fastapi uvicorn pydantic
-´´´
+       
 
 
