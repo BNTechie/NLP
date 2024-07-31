@@ -159,8 +159,119 @@ Content-Type: application/json
 
 ```
 
+## Step 4: Creating and Running a Docker Container
+Create requirements.txt:
 
 
+```
+fastapi
+uvicorn
+pandas
+scikit-learn
+pydantic
+
+```
+
+Create Dockerfile:
+```
+# Use the official Python image from the Docker Hub
+FROM python:3.8
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install any dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application code into the container
+COPY . .
+
+# Command to run the FastAPI app
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+```
 
 
+Build the Docker Image:
+
+Open a terminal, navigate to the directory containing your Dockerfile, and run:
+```
+sudo docker build -t sentiment-analysis-model .
+
+```
+
+Run the Docker Container:
+
+Run the following command to start the container:
+
+```
+sudo docker run -d -p 80:80 sentiment-analysis-model
+```
+Test Your API:
+
+Use a tool like Postman or curl to send a POST request to your running API:
+
+```
+POST http://localhost:80/predict
+Content-Type: application/json
+
+{
+  "review": "This movie was absolutely wonderful, I loved it!"
+}
+```
+
+## Step 5: Cleaning Up Docker Resources
+
+Stopping and Removing Docker Containers
+
+List Running Containers:
+```
+
+sudo docker ps
+
+```
+
+Stop the Running Container:
+
+
+```
+
+sudo docker stop <CONTAINER_ID_or_NAME>
+
+```
+
+Remove the Stopped Container:
+
+```
+sudo docker rm <CONTAINER_ID_or_NAME>
+
+```
+
+Removing Dangling Images
+
+List Dangling Images:
+
+```
+sudo docker images -f "dangling=true"
+
+```
+Remove Dangling Images:
+```
+sudo docker image prune
+
+```
+Removing Stopped Containers
+
+Remove All Stopped Containers:
+
+```
+sudo docker container prune
+
+```
+
+
+```
+```
 
