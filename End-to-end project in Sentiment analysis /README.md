@@ -23,6 +23,6 @@ Install Required Libraries:
 ```
 pip install pandas scikit-learn fastapi uvicorn pydantic
 
-´´´       
+```    
 
 
