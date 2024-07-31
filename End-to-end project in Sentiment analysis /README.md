@@ -100,3 +100,40 @@ print("Model trained and saved successfully!")
 ```
 
 
+Run the script:
+```
+python train_model.py
+
+```
+
+### Step 3: Building a FastAPI Application
+
+Create app.py:
+
+```
+**from fastapi import FastAPI, Request
+import pickle
+from pydantic import BaseModel
+from typing import List
+
+class Review(BaseModel):
+    review: str
+
+# Load the model
+with open('sentiment_model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+app = FastAPI()
+
+@app.post("/predict")
+def predict(review: Review):
+    prediction = model.predict([review.review])
+    sentiment = "positive" if prediction[0] == 1 else "negative"
+    return {"sentiment": sentiment}
+
+```
+
+
+
+
+
