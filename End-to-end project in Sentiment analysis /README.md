@@ -15,8 +15,14 @@ This project demonstrates an end-to-end sentiment analysis application using a m
 5. [Cleaning Up Docker Resources](#cleaning-up-docker-resources)
 
 
+## Step 1: Data Collection and Preprocessing
+
+Install Required Libraries:
 
 
-       
+```
+pip install pandas scikit-learn fastapi uvicorn pydantic
+
+´´´       
 
 
