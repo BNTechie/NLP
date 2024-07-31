@@ -133,6 +133,33 @@ def predict(review: Review):
 
 ```
 
+Install FastAPI and Uvicorn:
+
+```
+pip install fastapi uvicorn
+
+```
+
+Run the FastAPI App:
+```
+uvicorn app:app --reload
+
+```
+Test the API:
+
+Use a tool like Postman or curl to send a POST request to your running API:
+
+```
+POST http://localhost:8000/predict
+Content-Type: application/json
+
+{
+  "review": "This movie was absolutely wonderful, I loved it!"
+}
+
+```
+
+
 
 
 
