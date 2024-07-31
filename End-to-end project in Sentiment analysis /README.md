@@ -270,8 +270,31 @@ Remove All Stopped Containers:
 sudo docker container prune
 
 ```
-
+Removing Unused Volumes
+Remove Unused Volumes:
+```
+sudo docker volume prune
 
 ```
+Removing Unused Networks
+
+Remove Unused Networks:
+
 ```
+sudo docker network prune
+
+```
+Removing Unused Images
+Remove All Unused Images:
+
+```
+sudo docker image prune -a
+
+```
+Clean Up All Unused Resources
+
+Remove All Unused Containers, Networks, Images (both dangling and unreferenced), and Volumes:
+
+sudo docker system prune -a
+
 
