@@ -11,4 +11,6 @@ Natural Language Processing is an area of computer science concerned with intera
 - **Machine Translation:** Automatically translating text from one language to another, e.g., translating any text from English to Spanish.
 - **Speech Recognition:** Converting spoken language into text, such as voice commands in virtual assistants like Siri or Alexa.
 - **Named Entity Recognition (NER):** Identifying and classifying proper names in text, such as names of people, organizations, or locations.
-Natural language processing is a fast-evolving field. There are plenty of libraries that can be used for NLP. In this article, we will focus on Spacy and NLTK for our NLP analysis. 
+Natural language processing is a fast-evolving field. There are plenty of libraries that can be used for NLP. In this article, we will focus on Spacy and NLTK for our NLP analysis.
+
+## Spacy
